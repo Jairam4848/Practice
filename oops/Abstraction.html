@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction</title>
+</head>
+<body>
+    <script>
+        class Abstraction{
+            constructor(name,price,initialCharging){
+               this.name=name;
+               this.price=price;
+               this.initialCharging=initialCharging;
+               var currentCharging = 0;
+               var chargingDetails=(charge)=>{
+                currentCharging=initialCharging+charge
+                if(currentCharging>100){
+                    throw Error("Fulled Charged")
+                }
+               }
+               this.plugedCharge=(charge)=>{
+                chargingDetails(charge)
+               }
+            }
+        }
+         let mobile = new Abstraction("realme",17000,30)
+         let mobile1 = new Abstraction("oneplus",22000,40)
+
+         console.log(mobile.plugedCharge(33))
+         console.log(mobile.name)
+         console.log(mobile.price)
+
+
+    </script>
+</body>
+</html>

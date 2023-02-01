@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object</title>
+</head>
+<body>
+    <script>
+        // let date = new Date()
+        // document.write(date)
+
+        // let date1 = new Date(10000)
+        // document.write(date1)
+        // '<br>'
+        // let date2 = new Date(20000)
+        // document.write(date2)
+
+        // let date3 = new Date(24*60*60*1000)
+        // document.write(date3)
+
+        // let date4 = new Date(-24*60*60*1000)
+        // document.write(date4)    
+
+        // let date5 = new Date(2020,10,01,03,48,01)
+        // document.write(date5)
+
+        //  let date5 = new Date(2021)
+        // document.write(date5)
+
+        let date6 = new Date() 
+        console.log(date6.getFullYear())
+        console.log(date6.getDate())
+        console.log(date6.getDay())
+        console.log(date6.getHours())
+        console.log(date6.getMonth())
+        console.log(date6.getMinutes())
+        console.log(date6.getSeconds())
+        console.log(date6.getTime())
+
+        date6.setFullYear(2002)
+        console.log(date6.getFullYear())
+
+        let days = ["mon",'tues','wed','thur','fri','satur','sun']
+        console.log(days[date6.getDay()])    
+        
+    </script>
+    
+</body>
+</html>

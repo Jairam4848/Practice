@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+</head>
+
+<body>
+    <script>
+
+        class Bank {
+            constructor(name, account_num, account_type) {   // Properties
+                var name = name;
+                var account_num = account_num;
+                var account_type = account_type;
+
+                this.getName = () => {                   // Methods
+                    return name;
+                }
+                this.getAccount_num = () => {
+                    return account_num;
+                }
+                this.getAccount_type = () => {
+                    return this.account_type;
+                }
+
+                this.setName = (newName) => {
+                    name = newName;
+                }
+                this.setAccount_num = () => {
+                    this.account_num = Math.floor(Math.random() * 70002203233);
+                }
+                this.setAccount_type = (account_type) => {
+                    this.account_type = account_type
+                }
+            }
+
+        }
+
+        let bank = new Bank("rami", null, 'savings')
+        let bank1 = new Bank("fdf", null, 'current')
+        let bank2 = new Bank("fdfedf", null, 'savings')
+
+        console.log(bank.getName())
+        bank.setAccount_num()
+        console.log(bank.getAccount_num())
+
+
+        console.log(bank1.getName())
+        bank1.setAccount_num()
+        console.log(bank1.getAccount_num())
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // let jai = new Set()
+        // jai.add(10)
+        // jai.add(110, 4242, 323434)
+        // jai.add(12313)
+        // console.log(jai)
+
+        // let s3 = "Hyderabadde"
+        // let s4 = new Set(s3)
+        // s4.delete('e')
+        // console.log(s4)
+
+        // let s1 = "Hyderabad City"
+        // let s2 = new Set(s1)
+        // let item = s2.entries()
+        // console.log(item.next())
+        // console.log(item.next())
+        // console.log(item.next())
+        // console.log(item.next())
+        // console.log(item.next())
+        // console.log(item.next())
+        // console.log(item.next())
+        // console.log(item.next())
+        // console.log(item.next())
+        // console.log(item.next())
+        // console.log(item.next())
+
+        class Bank {
+    constructor(name,account_num,account_type) {   // Properties
+        this.name = name;
+        this.account_num = account_num;
+        this.account_type = account_type;
+    }
+
+    getName(){                   // Methods
+        return this.name;
+    }
+    getAccount_num(){
+        return this.account_num;
+    }
+    getAccount_type(){
+        return this.account_type;
+    }
+
+    setName(newName){
+        this.name= newName;
+    }
+    setAccount_num(){
+        this.account_num = Math.floor(Math.random()*70002203233);
+    }
+    setAccount_type(account_type){
+        this.account_type = account_type
+    }
+}
+
+let bank = new Bank("rami",null,'savings')
+let bank1 = new Bank("fdf",null,'current')
+let bank2 = new Bank("fdfedf",null,'savings')
+
+console.log(bank.getName())
+console.log(bank.getAccount_num)
+console.log(bank2)
+
+
+    </script>
+
+</body>
+
+</html>

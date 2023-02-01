@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism</title>
+</head>
+<body>
+
+    <script>
+        function jai(){
+            return 8;
+        }
+        function jai(name){
+            return `my ${name}`;
+        }
+        function jai(name,occupation){
+            return `my ${name} and my is ${occupation}`;
+        }
+        console.log(jai("rami","teueur"))
+    </script>
+
+
+    <script>
+        class Person {
+            constructor(name,designation){
+                this.name=name;
+                this.designation=designation;
+            }
+            Eat(){
+                console.log("Iam Eating")
+            }
+            Sleep(){
+                console.log("Iam Sleeping")
+            }
+            Learn(){
+                console.log('Iam Learning')
+            }
+            Learn(){
+                console.log('Iam Learning something new1')
+            }
+        }
+        class Agriculture extends Person{
+            constructor(name,designation,agri){
+                super(name,designation)
+                this.agri=agri;
+            }
+            Farmer(){
+                console.log('Iam Farmer')
+            }
+            Learn(){
+                console.log('Iam Learning something new2')
+            }
+        }
+        class Developer extends Person{
+            constructor(name,designation,react){
+                super(name,designation)
+                this.react=react;
+            }
+            Engineer(){
+                console.log('Iam Engineer')
+            }
+            Learn(){
+                console.log('Iam Learning something new')
+            }
+        }
+
+        let person = new Person("Thor","dederr","qwewewre")
+        console.log(person)
+        console.log(person.Learn())
+
+        let agric = new Agriculture("Ironman","wiwoewoe","wwlewew")
+        console.log(agric)
+        console.log(agric.Farmer())
+        console.log(agric.Learn())
+
+        let develop =new Developer("Spider","wqewrer","dfghj")
+        console.log(develop)
+        console.log(develop.Engineer())
+        console.log(develop.Learn())
+    </script>
+</body>
+</html>

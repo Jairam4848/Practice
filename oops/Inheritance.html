@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+
+<body>
+
+    <script>
+        class Person {
+            constructor(name, desgination) {
+                this.name = name;
+                this.desgination = desgination;
+            }
+            Eat() {
+                console.log("Iam eating")
+            }
+            Sleep() {
+                console.log("Iam Sleeping")
+            }
+            Learn() {
+                console.log("Iam Learning")
+            }
+        }
+
+        class Agriculture extends Person {
+            constructor(name, desgination, agri) {
+                super(name, desgination)
+                this.agri = agri;
+            }
+            Farmer() {
+                console.log("Iam")
+            }
+        }
+
+        class Developer extends Person {
+            constructor(name, desgination, developer) {
+                super(name, desgination)
+                this.developer = developer;
+            }
+            Engineer() {
+                console.log("Iam Engineer")
+            }
+        }
+
+        let person = new Person("Ironman", "cinema")
+        console.log(person)
+        console.log(person.Eat())
+
+        let agric = new Agriculture("dfdde", "wwewewe","erirui")
+        console.log(agric)
+        console.log(agric.Sleep())
+
+        let develop = new Developer("dfdde", "wwewewe","sdhyr")
+        console.log(develop)
+        console.log(develop.Learn())
+
+
+    </script>
+
+</body>
+
+</html>
